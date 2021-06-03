@@ -67,8 +67,10 @@ export class App extends Component {
   // }
   cercaElementi = str => {
     //alert(`Stai cercando ${str}` )
-    this.getElementi(str);
+    // this.getElementi(str);
+    alert('Stai cercando ' + str)
   }
+
   getElementi = str => {
     const url = `https://api.worldtradingdata.com/api/v1/stock_search?search_term=${str}&search_by=symbol,name&limit=50&page=1&api_token=NRRb7jYOsECVJFAckq4mik6zPku8TU1TspS0k879V2Ek98vEQZBDnsSH6UgJ`;
     this.setState({ inCaricamento: true, showError: false, showAvviso: false})
@@ -129,7 +131,6 @@ this.setState({listapreferiti:preferiti})
           </div>
         </header>
       </div>
-
     )
   }
 }
